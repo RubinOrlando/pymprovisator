@@ -2,7 +2,7 @@
 # -*- coding: iso-8859-1 -*-
 # Pymprovisator v. 0.1.1
 # This program is free software. See the files LICENSE.TXT and README.TXT for more details
-# Written by David Asorey Álvarez (forodejazz@yahoo.es). Madrid (Spain). August 2003.
+# Written by David Asorey Ãlvarez (forodejazz@yahoo.es). Madrid (Spain). August 2003.
 
 from constants import *
 from chord import *
@@ -18,12 +18,8 @@ class Style:
 
 
 # Now, we set a few styles
-swing = Style('swing', '4/4', '4')
 even_eights = Style('even_eights', '4/4', '4')
-jazz_waltz = Style('jazz_waltz', '3/4', '4')
-waltz = Style('waltz', '3/4', '4')
-five_swing = Style('five_swing', '5/4', '4')
-five = Style('five', '5/4', '4')
+# RO:add if not hidden elsewhere: even_sixteens = Style('even_sixteens', '4/4', '4')
 latin1 = Style('latin1', '4/4', '4')
 latin2 = Style('latin2', '4/4', '4')
 bossa = Style('bossa', '4/4', '4')
@@ -32,12 +28,12 @@ samba2 = Style('samba2', '4/4', '4')
 ballad = Style('ballad', '4/4', '4')
 funk = Style('funk', '4/4', '4')
 rock = Style('rock', '4/4', '4')
-basic = Style('basic', '4/4', '4')
+basic = Style('basic', '4/4', '4') # RO: find out: is this jazz? or else? What are the specifics?
 
-available_styles = [swing, even_eights, jazz_waltz, waltz, five_swing, five, latin1, latin2, bossa, samba1, samba2, ballad, funk, rock, basic]
+available_styles = [even_eights, latin1, latin2, bossa, samba1, samba2, ballad, funk, rock, basic] # RO:add even_sixteens ? (l22)
 
 class Song:
-    """This class represents a jazz song. The parameters are:
+    """This class represents a song. The parameters are:
     id: String, without spaces. Used for file names
     title, tempo: Integer
     style: Style, as defined in class Style, n_choruses: Integer
